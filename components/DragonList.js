@@ -1,3 +1,6 @@
+// /src/components/DragonList.js
+'use client'; // Este é um Client Component
+
 import DragonCard from './DragonCard';
 
 export default function DragonList({ dragons, onDelete }) {
@@ -5,11 +8,7 @@ export default function DragonList({ dragons, onDelete }) {
         <div>
             <h2>Lista de Dragões</h2>
             {dragons.map((dragon) => (
-                <DragonCard 
-                    key={dragon.id} 
-                    dragon={dragon} 
-                    onDelete={onDelete} 
-                />
+                <DragonCard key={dragon.id} dragon={dragon} onDelete={onDelete} />
             ))}
         </div>
     );
