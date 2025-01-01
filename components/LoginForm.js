@@ -1,5 +1,5 @@
-// /src/components/LoginForm.js
-'use client'; // Para permitir o uso de hooks
+'use client';
+import styles from '../src/styles/components/LoginForm.module.scss';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
@@ -18,19 +18,19 @@ export default function LoginForm() {
     };
 
     return (
-        <div>
+        <div className={styles.container}>
             <h2>Login</h2>
-            <input 
-                type="text" 
-                placeholder="Usuário" 
-                value={username} 
-                onChange={(e) => setUsername(e.target.value)} 
+            <input
+                type="text"
+                placeholder="Usuário"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
             />
-            <input 
-                type="password" 
-                placeholder="Senha" 
-                value={password} 
-                onChange={(e) => setPassword(e.target.value)} 
+            <input
+                type="password"
+                placeholder="Senha"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
             />
             <button onClick={handleLogin}>Entrar</button>
         </div>
