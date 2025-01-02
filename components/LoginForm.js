@@ -1,38 +1,45 @@
 'use client';
-import styles from '../src/styles/components/LoginForm.module.scss';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import styles from '@/styles/components/LoginForm.module.scss';
 
 export default function LoginForm() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const router = useRouter();
 
-    const handleLogin = () => {
+    const handleLogin = (event) => {
+        event.preventDefault();
         if (username === 'admin' && password === '1234') {
             localStorage.setItem('loggedIn', true);
             router.push('/dragons');
         } else {
-            alert('Usuário ou senha inválidos');
+            alert('Invalid username or password');
         }
     };
 
     return (
-        <div className={styles.container}>
-            <h2>Login</h2>
+        <form className={styles.container} onSubmit={handleLogin}>
+            <h2>Loggin in</h2>
+            <label htmlFor="username">Username:</label>
             <input
+                id="username"
                 type="text"
-                placeholder="Usuário"
+                placeholder="Enter your username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
+                required
             />
+            <label htmlFor="password">Password:</label>
             <input
+                id="password"
                 type="password"
-                placeholder="Senha"
+                placeholder="Enter your password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                required
             />
-            <button onClick={handleLogin}>Entrar</button>
-        </div>
+            <button type="submit">Sign in</button>
+        </form>
     );
 }

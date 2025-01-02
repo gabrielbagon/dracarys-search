@@ -13,22 +13,22 @@ export default function DragonForm({ onSubmit, initialData = {} }) {
 
     return (
         <form className={styles.formContainer} onSubmit={handleSubmit}>
-            <h2>{initialData.id ? 'Editar Dragão' : 'Cadastrar Dragão'}</h2>
+            <h2>{initialData.id ? 'Edit Dragon' : 'Register Dragon'}</h2>
             <input
                 type="text"
-                placeholder="Nome do Dragão"
+                placeholder="Dragon's name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
             />
             <input
                 type="text"
-                placeholder="Tipo do Dragão"
+                placeholder="Dragon's type"
                 value={type}
                 onChange={(e) => setType(e.target.value)}
                 required
             />
-            <button type="submit">{initialData.id ? 'Salvar Alterações' : 'Cadastrar'}</button>
+            <button type="submit">{initialData.id ? 'Save changes' : 'Register'}</button>
         </form>
     );
 }

@@ -1,4 +1,3 @@
-// /src/app/dragons/[id]/page.js
 import axios from 'axios';
 
 async function fetchDragon(id) {
@@ -11,10 +10,10 @@ export default async function DragonDetailsPage({ params }) {
 
     return (
         <div>
-            <h1>Detalhes do Dragão</h1>
-            <p><strong>Nome:</strong> {dragon.name}</p>
-            <p><strong>Tipo:</strong> {dragon.type}</p>
-            <p><strong>Data de Criação:</strong> {dragon.createdAt}</p>
+            <h1>Dragon Details</h1>
+            <p><strong>Name:</strong> {dragon.name}</p>
+            <p><strong>Type:</strong> {dragon.type}</p>
+            <p><strong>Created at:</strong> {dragon.createdAt}</p>
         </div>
     );
 }
