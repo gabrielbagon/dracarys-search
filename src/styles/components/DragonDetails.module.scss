@@ -1,0 +1,89 @@
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff00;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #033f28;
+    }
+
+}
+
+
+
+.details {
+    margin-bottom: 20px;
+
+    p {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+
+        strong {
+            color: #333;
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        font-size: 1em;
+        cursor: pointer;
+
+        &:first-child {
+            background-color: #033f28;
+            color: #fff;
+
+            &:hover {
+                background-color: #005bb5;
+            }
+        }
+
+        &:last-child {
+            background-color: #ddd;
+            color: #333;
+
+            &:hover {
+                background-color: #bbb;
+            }
+        }
+    }
+}
+
+.loading, .error {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+    margin: 20px 0;
+}
+
+/* ... seus outros estilos ... */
+
+.buttons {
+    display: flex;
+    gap: 10px; // Espaçamento entre os botões
+    margin-top: 20px;
+}
+
+.deleteButton {
+    background-color: #dc3545; // Vermelho
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #c82333;
+    }
+}

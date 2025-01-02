@@ -1,13 +1,12 @@
-// /src/app/dragons/page.js
-'use client'; // Torna a página um Client Component
+'use client'; 
 
 import { useEffect, useState } from 'react';
 import DragonList from '../../../components/DragonList';
+import withAuth from '../../../components/withAuth';
 
-export default function DragonListPage() {
+ function DragonListPage() {
     const [dragons, setDragons] = useState([]);
-
-    // Buscar os dragões ao carregar a página
+    
     useEffect(() => {
         async function fetchDragons() {
             const res = await fetch('http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon');
@@ -16,14 +15,13 @@ export default function DragonListPage() {
         }
         fetchDragons();
     }, []);
-
-    // Deletar dragão
+    
     const handleDelete = async (id) => {
         await fetch(`http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/${id}`, {
             method: 'DELETE',
         });
         setDragons((prevDragons) => prevDragons.filter((dragon) => dragon.id !== id));
-        alert('Dragão removido');
+        alert('Dragon removed');
     };
 
     return (
@@ -32,3 +30,5 @@ export default function DragonListPage() {
         </div>
     );
 }
+
+export default withAuth(DragonListPage);

@@ -6,8 +6,8 @@ export default function DragonCard({ dragon, onDelete }) {
     return (
         <div className={styles.card}>
             <h3>{dragon.name}</h3>
-            <p>Tipo: {dragon.type}</p>
-            <button onClick={() => onDelete(dragon.id)}>Remover</button>
+            <p>Type: {dragon.type}</p>
+            <button onClick={() => onDelete(dragon.id)}>Remove</button>
         </div>
     );
 }

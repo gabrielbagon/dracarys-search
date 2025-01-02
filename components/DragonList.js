@@ -1,15 +1,20 @@
-// /src/components/DragonList.js
-'use client'; // Este é um Client Component
+'use client';
 
 import DragonCard from './DragonCard';
+import styles from '../src/styles/components/DragonCard.module.scss';
+
 
 export default function DragonList({ dragons, onDelete }) {
+    if (dragons.length === 0) {
+        return <p className={styles.empty}>Nenhum dragão encontrado.</p>;
+    }
+
     return (
         <div>
-            <h2>Lista de Dragões</h2>
             {dragons.map((dragon) => (
                 <DragonCard key={dragon.id} dragon={dragon} onDelete={onDelete} />
             ))}
         </div>
     );
 }
+
