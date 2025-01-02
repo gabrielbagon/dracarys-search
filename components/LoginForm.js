@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import styles from '@/styles/components/LoginForm.module.scss';
+import styles from '../src/styles/components/LoginForm.module.scss';
 
 export default function LoginForm() {
     const [username, setUsername] = useState('');
@@ -19,8 +19,9 @@ export default function LoginForm() {
     };
 
     return (
+        
         <form className={styles.container} onSubmit={handleLogin}>
-            <h2>Loggin in</h2>
+            <h1>Dracarys</h1>
             <label htmlFor="username">Username:</label>
             <input
                 id="username"
@@ -41,5 +42,6 @@ export default function LoginForm() {
             />
             <button type="submit">Sign in</button>
         </form>
+      
     );
 }

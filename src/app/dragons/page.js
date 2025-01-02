@@ -3,7 +3,9 @@
 import { useEffect, useState } from 'react';
 import DragonList from '../../../components/DragonList';
 
-export default function DragonListPage() {
+import withAuth from '../../../components/withAuth';
+
+ function DragonListPage() {
     const [dragons, setDragons] = useState([]);
     
     useEffect(() => {
@@ -29,3 +31,5 @@ export default function DragonListPage() {
         </div>
     );
 }
+
+export default withAuth(DragonListPage);

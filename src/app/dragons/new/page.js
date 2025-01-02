@@ -2,8 +2,9 @@
 'use client';
 import { useState } from 'react';
 import axios from 'axios';
+import withAuth from '../../../../components/withAuth';
 
-export default function NewDragonPage() {
+function NewDragonPage() {
     const [name, setName] = useState('');
     const [type, setType] = useState('');
 
@@ -34,4 +35,6 @@ export default function NewDragonPage() {
             <button onClick={handleSubmit}>Salvar</button>
         </div>
     );
-}
+};
+
+export default withAuth(NewDragonPage);
