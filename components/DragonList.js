@@ -3,10 +3,9 @@
 import DragonCard from './DragonCard';
 import styles from '../src/styles/components/DragonCard.module.scss';
 
-
 export default function DragonList({ dragons, onDelete }) {
     if (dragons.length === 0) {
-        return <p className={styles.empty}>Nenhum dragão encontrado.</p>;
+        return <p className={styles.empty}>No dragons found.</p>;
     }
 
     return (

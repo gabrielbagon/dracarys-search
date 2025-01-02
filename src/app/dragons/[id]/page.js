@@ -22,7 +22,7 @@ export default function DragonDetailsPage() {
             try {
                 const res = await fetch(`http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/${dragonId}`);
                 if (!res.ok) {
-                    throw new Error(`HTTP error! status: ${res.status}`); // Mensagem de erro mais informativa
+                    throw new Error(`HTTP error! status: ${res.status}`);
                 }
                 const data = await res.json();
                 setDragon(data);
@@ -35,20 +35,20 @@ export default function DragonDetailsPage() {
         fetchDragon();
     }, [dragonId]);
 
-    if (isLoading) return <p className={styles.loading}>Carregando...</p>;
-    if (error) return <p className={styles.error}>Não foi possível carregar os detalhes do dragão.</p>;
+    if (isLoading) return <p className={styles.loading}>Loading...</p>;
+    if (error) return <p className={styles.error}>The dragon's details could not be loaded.</p>;
 
     return (
         <div className={styles.container}>
-            <h1>Detalhes do Dragão</h1>
+            <h1>Dragon details</h1>
             <div className={styles.details}>
-                <p><strong>Nome:</strong> {dragon.name}</p>
-                <p><strong>Tipo:</strong> {dragon.type}</p>
-                <p><strong>Data de Criação:</strong> {new Date(dragon.createdAt).toLocaleDateString()}</p>
+                <p><strong>Name:</strong> {dragon.name}</p>
+                <p><strong>Type:</strong> {dragon.type}</p>
+                <p><strong>Created at:</strong> {new Date(dragon.createdAt).toLocaleDateString()}</p>
             </div>
             <div className={styles.buttons}>
-                <button onClick={() => router.push(`/dragons/new?id=${dragon.id}`)}>Editar</button>
-                <button onClick={() => router.push('/dragons')}>Voltar para a Lista</button>
+                <button onClick={() => router.push(`/dragons/new?id=${dragon.id}`)}>Edit</button>
+                <button onClick={() => router.push('/dragons')}>Back to the list</button>
             </div>
         </div>
     );

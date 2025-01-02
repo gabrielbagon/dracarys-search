@@ -7,10 +7,10 @@ import styles from '../src/styles/components/Navbar.module.scss';
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [hydrated, setHydrated] = useState(false);
-    const router = useRouter(); // Usar o roteador do Next.js
+    const router = useRouter();
 
     useEffect(() => {
-        setHydrated(true); // Marca que o cliente está hidratado
+        setHydrated(true);
     }, []);
 
     const toggleMenu = () => {
@@ -19,7 +19,7 @@ export default function Navbar() {
 
     const handleLogout = () => {
         localStorage.removeItem('loggedIn');
-        router.push('/login'); // Navegação controlada
+        router.push('/login');
     };
 
     if (!hydrated) {
@@ -28,10 +28,10 @@ export default function Navbar() {
                 <div className={styles.logo}>Dracarys</div>
                 <ul className={styles.navList}>
                     <li className={styles.navItem}>
-                        <Link href="/dragons">Lista de Dragões</Link>
+                        <Link href="/dragons">Dragon List</Link>
                     </li>
                     <li className={styles.navItem}>
-                        <Link href="/dragons/new">Cadastrar Dragão</Link>
+                        <Link href="/dragons/new">Register</Link>
                     </li>
                     <li className={styles.navItem}>
                         <button onClick={handleLogout}>Logout</button>
@@ -49,10 +49,10 @@ export default function Navbar() {
             </div>
             <ul className={`${styles.navList} ${menuOpen ? styles.active : ''}`}>
                 <li className={styles.navItem}>
-                    <Link href="/dragons">Lista de Dragões</Link>
+                    <Link href="/dragons">Dragon List</Link>
                 </li>
                 <li className={styles.navItem}>
-                    <Link href="/dragons/new">Cadastrar Dragão</Link>
+                    <Link href="/dragons/new">Register</Link>
                 </li>
                 <li className={styles.navItem}>
                     <button onClick={handleLogout}>Logout</button>

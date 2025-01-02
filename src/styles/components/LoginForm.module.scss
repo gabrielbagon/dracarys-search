@@ -3,10 +3,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: auto; /* Corrigido para permitir crescimento natural */
+  height: auto;
   min-height: 50vh;
-  max-width: 400px; /* Define um limite para o tamanho do formulário */
-  margin: 50px auto; /* Centraliza horizontalmente */
+  max-width: 400px;
+  margin: 50px auto;
   padding: 20px;
   background: rgba(0, 0, 0, 0.19);
   border-radius: 16px;
@@ -44,8 +44,8 @@
   }
 
   input {
-      width: 100%; /* Ajuste dinâmico */
-      max-width: 300px; /* Limite para inputs */
+      width: 100%;
+      max-width: 300px;
       padding: 10px;
       margin: 10px 0;
       border: 1px solid #ccc;
@@ -63,8 +63,8 @@
   }
 
   button {
-      width: 100%; /* Ajuste dinâmico */
-      max-width: 300px; /* Limite para botão */
+      width: 100%;
+      max-width: 300px;
       padding: 10px;
       background-color: #099813;
       color: #fff;
