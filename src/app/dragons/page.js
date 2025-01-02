@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import DragonList from '../../../components/DragonList';
-
 import withAuth from '../../../components/withAuth';
 
  function DragonListPage() {

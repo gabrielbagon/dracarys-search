@@ -66,3 +66,24 @@
     color: #555;
     margin: 20px 0;
 }
+
+/* ... seus outros estilos ... */
+
+.buttons {
+    display: flex;
+    gap: 10px; // Espaçamento entre os botões
+    margin-top: 20px;
+}
+
+.deleteButton {
+    background-color: #dc3545; // Vermelho
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #c82333;
+    }
+}

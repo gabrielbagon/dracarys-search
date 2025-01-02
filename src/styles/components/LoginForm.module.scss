@@ -1,55 +1,92 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-    margin: 50px 412px;
-    background: rgba(0, 0, 0, 0.19);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5.2px);
-    -webkit-backdrop-filter: blur(5.2px);
-    border: 1px solid rgba(0, 0, 0, 0.28);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto; /* Corrigido para permitir crescimento natural */
+  min-height: 50vh;
+  max-width: 400px; /* Define um limite para o tamanho do formulário */
+  margin: 50px auto; /* Centraliza horizontalmente */
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 
-  
-    h1 {
+  /* Compatibilidade com Safari */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  border: 1px solid rgba(0, 0, 0, 0.28);
+
+  h1 {
       color: #e7e7e7;
       margin-bottom: 24px;
       text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
-    }
-    label {
+      font-size: 1.8em;
+
+      @media (max-width: 768px) {
+          font-size: 1.5em;
+      }
+
+      @media (max-width: 480px) {
+          font-size: 1.2em;
+      }
+  }
+
+  label {
       font-size: 1.2em;
       color: #e7e7e7;
       text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
-    }
-  
-    input {
-      width: 250px;
+
+      @media (max-width: 480px) {
+          font-size: 1em;
+      }
+  }
+
+  input {
+      width: 100%; /* Ajuste dinâmico */
+      max-width: 300px; /* Limite para inputs */
       padding: 10px;
       margin: 10px 0;
       border: 1px solid #ccc;
       border-radius: 4px;
       font-size: 1em;
-  
+
       &:focus {
-        outline: none;
-        border-color: #033f28;
+          outline: none;
+          border-color: #033f28;
       }
-    }
-  
-    button {
-      width: 250px;
+
+      @media (max-width: 480px) {
+          font-size: 0.9em;
+      }
+  }
+
+  button {
+      width: 100%; /* Ajuste dinâmico */
+      max-width: 300px; /* Limite para botão */
       padding: 10px;
       background-color: #099813;
       color: #fff;
       border: none;
       border-radius: 4px;
       font-size: 1em;
-  
+
       &:hover {
-        background-color: #088911;
+          background-color: #088911;
       }
-    }
+
+      @media (max-width: 480px) {
+          font-size: 0.9em;
+      }
   }
-  
+
+  @media (max-width: 768px) {
+      padding: 15px;
+  }
+
+  @media (max-width: 480px) {
+      padding: 10px;
+      border-radius: 8px;
+  }
+}
