@@ -34,7 +34,7 @@ Follow these steps to set up the project locally:
 
 4. Open the project in your browser:
 
-    [text](http://localhost:3000)
+    http://localhost:3000
 
 🗂️ Project Structure
 
