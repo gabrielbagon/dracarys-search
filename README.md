@@ -23,7 +23,7 @@ Follow these steps to set up the project locally:
 
    npm install
 
-   # or
+   or
 
    yarn install
 
@@ -31,7 +31,7 @@ Follow these steps to set up the project locally:
    
    npm run dev
 
-    # or
+    or
 
     yarn dev
 
@@ -68,7 +68,7 @@ src/
 To run the tests, execute:
 
 npm test
-# or
+or
 yarn test
 
 The tests include:
