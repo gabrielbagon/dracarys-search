@@ -17,23 +17,20 @@ Follow these steps to set up the project locally:
 1. Clone the repository:
 
    git clone https://github.com/your-username/dracarys.git
+
    cd dracarys
 
 2. Install the dependencies:
 
    npm install
-
    or
-
    yarn install
 
 3. Start the development server:
    
    npm run dev
-
     or
-
-    yarn dev
+   yarn dev
 
 4. Open the project in your browser:
 
@@ -41,6 +38,7 @@ Follow these steps to set up the project locally:
 
 🗂️ Project Structure
 
+```markdown
 src/
 ├── app/
 │   ├── layout.js          # Global layout of the project
@@ -54,6 +52,8 @@ src/
 ├── styles/                # Style files (CSS/SASS)
 ├── mocks/                 # Mock API handlers for testing
 └── tests/                 # Unit and integration tests
+```
+
 
 ✨ Features
 
