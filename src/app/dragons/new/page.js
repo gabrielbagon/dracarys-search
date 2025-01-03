@@ -1,8 +1,9 @@
 'use client';
 import { useState } from 'react';
-import styles from '@/styles/components/DragonForm.module.scss';
+import styles from '../../../styles/components/DragonForm.module.scss';
+import withAuth from '../../../../components/withAuth';
 
-export default function NewDragonPage() {
+function NewDragonPage() {
     const [name, setName] = useState('');
     const [type, setType] = useState('');
     const [feedback, setFeedback] = useState(null);
@@ -15,8 +16,8 @@ export default function NewDragonPage() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ name, type }),
             });
-            if (!res.ok) throw new Error('Erro ao cadastrar o dragão.');
-            setFeedback({ type: 'success', message: 'Dragão cadastrado com sucesso!' });
+            if (!res.ok) throw new Error('Error registering the dragon.');
+            setFeedback({ type: 'success', message: 'Dragon successfully registered!' });
             setName('');
             setType('');
         } catch (err) {
@@ -26,12 +27,12 @@ export default function NewDragonPage() {
 
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>Cadastrar Dragão</h1>
+            <h1 className={styles.title}>Register</h1>
             <form className={styles.form} onSubmit={handleSubmit}>
                 <input
                     className={styles.input}
                     type="text"
-                    placeholder="Nome do Dragão"
+                    placeholder="Dragon Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
@@ -39,12 +40,12 @@ export default function NewDragonPage() {
                 <input
                     className={styles.input}
                     type="text"
-                    placeholder="Tipo do Dragão"
+                    placeholder="Type of Dragon"
                     value={type}
                     onChange={(e) => setType(e.target.value)}
                     required
                 />
-                <button className={styles.button} type="submit">Cadastrar</button>
+                <button className={styles.button} type="submit">Submit</button>
                 {feedback && (
                     <p className={feedback.type === 'success' ? styles.success : styles.error}>
                         {feedback.message}
@@ -54,3 +55,4 @@ export default function NewDragonPage() {
         </div>
     );
 }
+export default withAuth(NewDragonPage);

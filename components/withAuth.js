@@ -9,7 +9,7 @@ export default function withAuth(WrappedComponent) {
         useEffect(() => {
             const isLoggedIn = localStorage.getItem('loggedIn');
             if (!isLoggedIn) {
-                router.push('/login'); // Redireciona para login se não estiver autenticado
+                router.push('/login');
             }
         }, [router]);
 

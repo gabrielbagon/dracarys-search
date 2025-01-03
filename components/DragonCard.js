@@ -1,5 +1,4 @@
-// /src/components/DragonCard.js
-'use client'; // Este é um Client Component
+'use client';
 import styles from '../src/styles/components/DragonCard.module.scss';
 
 export default function DragonCard({ dragon, onDelete }) {

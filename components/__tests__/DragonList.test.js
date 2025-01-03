@@ -8,7 +8,7 @@ describe('DragonList', () => {
     ];
     const mockOnDelete = jest.fn();
 
-    it('deve renderizar a lista de dragões', () => {
+    it('must render the list of dragons', () => {
         render(<DragonList dragons={dragons} onDelete={mockOnDelete} />);
         expect(screen.getByText('Fire Drake')).toBeInTheDocument();
         expect(screen.getByText('Water Wyrm')).toBeInTheDocument();
