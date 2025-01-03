@@ -1,8 +1,9 @@
 'use client';
 import { useState } from 'react';
-import styles from '@/styles/components/DragonForm.module.scss';
+import styles from '../../../styles/components/DragonForm.module.scss';
+import withAuth from '../../../../components/withAuth';
 
-export default function NewDragonPage() {
+function NewDragonPage() {
     const [name, setName] = useState('');
     const [type, setType] = useState('');
     const [feedback, setFeedback] = useState(null);
@@ -26,7 +27,7 @@ export default function NewDragonPage() {
 
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>Register Dragon</h1>
+            <h1 className={styles.title}>Register</h1>
             <form className={styles.form} onSubmit={handleSubmit}>
                 <input
                     className={styles.input}
@@ -44,7 +45,7 @@ export default function NewDragonPage() {
                     onChange={(e) => setType(e.target.value)}
                     required
                 />
-                <button className={styles.button} type="submit">Register</button>
+                <button className={styles.button} type="submit">Submit</button>
                 {feedback && (
                     <p className={feedback.type === 'success' ? styles.success : styles.error}>
                         {feedback.message}
@@ -54,3 +55,4 @@ export default function NewDragonPage() {
         </div>
     );
 }
+export default withAuth(NewDragonPage);

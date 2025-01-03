@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
-import styles from '../../../styles/components/DragonForm.module.scss';
+import styles from '../src/styles/components/DragonForm.module.scss';
+
 
 export default function DragonForm({ onSubmit, initialData = {} }) {
     const [name, setName] = useState(initialData.name || '');

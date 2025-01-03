@@ -22,6 +22,7 @@ export default function LoginForm() {
         
         <form className={styles.container} onSubmit={handleLogin}>
             <h1>Dracarys</h1>
+            <p>Your very own dragon factory.</p>
             <label htmlFor="username">Username:</label>
             <input
                 id="username"
