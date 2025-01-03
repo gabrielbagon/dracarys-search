@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dracarys Project 🐉
 
-## Getting Started
+Welcome to Dracarys, a dragon management system! This project allows you to register, edit, view, and delete dragons easily and intuitively. 🚀
 
-First, run the development server:
+## 📋 Prerequisites
 
-```bash
-npm run dev
+Make sure you have the following tools installed:
+
+- [Node.js](https://nodejs.org/) (v16 or higher)
+- [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+- [Git](https://git-scm.com/)
+
+## ⚙️ Setting Up the Environment
+
+Follow these steps to set up the project locally:
+
+1. Clone the repository:
+
+   git clone https://github.com/your-username/dracarys.git
+   cd dracarys
+
+2. Install the dependencies:
+
+   npm install
+
+   # or
+
+   yarn install
+
+3. Start the development server:
+   
+   npm run dev
+
+    # or
+
+    yarn dev
+
+4. Open the project in your browser:
+
+    [text](http://localhost:3000)
+
+🗂️ Project Structure
+
+src/
+├── app/
+│   ├── layout.js          # Global layout of the project
+│   ├── page.js            # Home page
+│   ├── dragons/           # Dragons module
+│   │   ├── [id]/page.js   # Dragon details page
+│   │   ├── new/page.js    # Dragon registration page
+├── components/            # Reusable components
+│   ├── Navbar.js          # Application navbar
+│   ├── DragonForm.js      # Form for dragon registration/editing
+├── styles/                # Style files (CSS/SASS)
+├── mocks/                 # Mock API handlers for testing
+└── tests/                 # Unit and integration tests
+
+✨ Features
+
+- Secure Login: Only authenticated users can access the system.
+- Dragon Management: Create, edit, view, and delete dragons.
+- Responsive Interface: Fully adapted for mobile devices.
+- Form Validation: Visual feedback for invalid inputs.
+- Automated Tests: Quality assurance with unit and integration tests.
+
+🧪 Tests
+
+To run the tests, execute:
+
+npm test
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+yarn test
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The tests include:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Unit tests for individual components.
+Integration tests to verify data flow and functionality.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🚀 Deployment
 
-## Learn More
+This project is ready for deployment on Vercel. Follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. Install the Vercel CLI:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    npm install -g vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Log in:
 
-## Deploy on Vercel
+    vercel login
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Deploy the project:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    vercel
+
+4. The production link will be generated automatically.
+
+📜 License
+
+This project is licensed under the[ MIT License](https://chatgpt.com/g/g-HxPrv1p8v-code-tutor/c/LICENSE).
+
+Contributions
+Contributions are welcome! Feel free to open issues or submit pull requests. 😄
+
+
+
+
+
