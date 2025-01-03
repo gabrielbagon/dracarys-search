@@ -36,7 +36,7 @@ Follow these steps to set up the project locally:
 
     http://localhost:3000
 
-🗂️ Project Structure
+## 🗂️ Project Structure
 
 ```markdown
 src/
@@ -55,7 +55,7 @@ src/
 ```
 
 
-✨ Features
+## ✨ Features
 
 - Secure Login: Only authenticated users can access the system.
 - Dragon Management: Create, edit, view, and delete dragons.
@@ -63,7 +63,7 @@ src/
 - Form Validation: Visual feedback for invalid inputs.
 - Automated Tests: Quality assurance with unit and integration tests.
 
-🧪 Tests
+## 🧪 Tests
 
 To run the tests, execute:
 
@@ -76,7 +76,7 @@ The tests include:
 Unit tests for individual components.
 Integration tests to verify data flow and functionality.
 
-🚀 Deployment
+## 🚀 Deployment
 
 This project is ready for deployment on Vercel. Follow these steps:
 
@@ -94,11 +94,12 @@ This project is ready for deployment on Vercel. Follow these steps:
 
 4. The production link will be generated automatically.
 
-📜 License
+## 📜 License
 
 This project is licensed under the[ MIT License](https://chatgpt.com/g/g-HxPrv1p8v-code-tutor/c/LICENSE).
 
-Contributions
+## Contributions 
+
 Contributions are welcome! Feel free to open issues or submit pull requests. 😄
 
 
