@@ -16,7 +16,7 @@ export default function DragonCard({ dragon, onDelete }) {
             <p className={styles.createdAt}>
                 <strong>Created On:</strong> {formattedDate}
              </p>
-            <button onClick={() => onDelete(dragon.id)}>Remove</button>
+            <button className={styles.deleteButton} onClick={() => onDelete(dragon.id)}>Remove</button>
         </div>
     );
 }
